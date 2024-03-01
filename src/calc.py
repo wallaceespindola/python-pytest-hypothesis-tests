@@ -23,6 +23,6 @@ def divide(num1, num2):
     return num1 / num2
 
 
-def print_operation(text: str):
+def operation_text(text: str):
     """It returns a string text containing the input"""
     return f'This is the input text: {text}'
