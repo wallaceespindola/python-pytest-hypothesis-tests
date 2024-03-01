@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://github.com/pytest-dev/pytest/raw/main/doc/en/img/pytest_logo_curves.svg" alt="Pytest" width="300"/>
+  <img src="https://avatars.githubusercontent.com/u/18481919?s=200&v=4" alt="Hypothesis" width="300"/>
+</p>
+
 PYTEST AND HYPOTESIS TESTS AND TUTORIAL
 =============
 [![python 3.10](https://img.shields.io/badge/python-3.10-brightgreen.svg)](https://www.python.org/)
