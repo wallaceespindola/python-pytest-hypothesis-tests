@@ -94,3 +94,24 @@ pytest src/tests -n 5
 ```shell
 $ autopep8 --in-place --aggressive --aggressive <filename>
 ```
+
+Hypothesis shrinking
+=====
+
+Hypothesis shrinking is a process that occurs after a test failure is detected. When Hypothesis finds an example that causes your test to fail, it doesn't stop there. Instead, it tries to simplify or "shrink" the example to the smallest or simplest form that still causes the test to fail. This feature is incredibly useful because it often uncovers the minimal scenario that triggers the bug, making it easier to understand and fix.
+
+Here's a detailed breakdown of how shrinking works in Hypothesis:
+
+Initial Failure Discovery: First, Hypothesis generates various random inputs based on the strategies you've defined to test your code until it finds a set of inputs that causes a test to fail.
+
+Shrinking Process: Once a failure is found, Hypothesis enters the shrinking phase. It tries to reduce the complexity of the failing input while still keeping the test in a failing state. This is done iteratively, attempting many smaller variations of the original failing input and checking if they still produce the failure.
+
+Minimal Failure Example: The process continues until Hypothesis cannot simplify the example any further without the test passing. The result is a "minimal" example that demonstrates the failure. This example is minimal in the sense that changing any single element of the input (reducing a number, shortening a string, etc.) would cause the test not to fail.
+
+Benefits: The primary benefit of shrinking is that it often points directly to the root cause of the issue. For instance, if your function fails with a list of 100 integers, shrinking might reveal that it actually fails with just a single specific integer. This makes bugs much easier to diagnose and fix, especially when dealing with complex inputs.
+
+Consistency: The shrinking process in Hypothesis is deterministic. Given the same initial failure, Hypothesis will always shrink to the same minimal example. This consistency is helpful for debugging and ensures that the minimal example is not dependent on random chance.
+
+Customization: While the default shrinking behavior is usually sufficient, Hypothesis allows you to customize aspects of the process for advanced scenarios. However, in many cases, the out-of-the-box shrinking provides significant value without any need for customization.
+
+To illustrate, if you have a test that fails for a list of integers [10, 0, -5, 30, 20] that causes a division by zero in your function, Hypothesis might shrink this list down to just [0] if the zero alone is enough to trigger the bug, clearly pointing out that the issue arises from division by zero, not the other values in the array.
