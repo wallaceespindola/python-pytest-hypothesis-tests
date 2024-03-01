@@ -13,13 +13,7 @@ PYTEST AND HYPOTESIS TESTS AND TUTORIAL
 [![xdist 3.5.0](https://img.shields.io/badge/xdist-3.5.0-orange.svg)](https://pypi.org/project/pytest-xdist/)
 [![Build Status](https://app.travis-ci.com/wallaceespindola/python-pytest-hypothesis-tests.svg?branch=main)](https://travis-ci.org/wallaceespindola/python-pytest-hypothesis-tests)
 [![Coverage Status](https://coveralls.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/badge.svg?branch=main)](https://coveralls.io/github/wallaceespindola/python-pytest-hypothesis-tests?branch=main)
-[![Updates](https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/shield.svg)](https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/)
-[![Python 3](https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/python-3-shield.svg)](https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/)
-[![Build Status](https://travis-ci.org/wallaceespindola/python-pytest-hypothesis-tests.svg?branch=master)](https://travis-ci.org/wallaceespindola/python-pytest-hypothesis-tests)
-[![Coverage Status](https://coveralls.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/badge.svg?branch=master)](https://coveralls.io/github/wallaceespindola/python-pytest-hypothesis-tests?branch=main)
-
 [//]: # ([![Updates]&#40;https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/shield.svg&#41;]&#40;https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/&#41;)
-
 [//]: # ([![Python 3]&#40;https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/python-3-shield.svg&#41;]&#40;https://pyup.io/repos/github/wallaceespindola/python-pytest-hypothesis-tests/&#41;)
 
 Python tests using pytest and hypothesis.
