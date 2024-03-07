@@ -3,7 +3,7 @@
   <img src="https://avatars.githubusercontent.com/u/18481919?s=200&v=4" alt="Hypothesis" width="300"/>
 </p>
 
-PYTEST AND HYPOTESIS TESTS AND TUTORIAL
+PYTEST AND HYPOTESIS TESTS AND TUTORIAL FOR PROPERTY-BASED TESTING
 =============
 [![python 3.10](https://img.shields.io/badge/python-3.10-green.svg)](https://www.python.org/)
 [![pytest 8.0.2](https://img.shields.io/badge/pytest-8.0.2-purple.svg)](https://docs.pytest.org/en/latest/)
@@ -14,6 +14,21 @@ PYTEST AND HYPOTESIS TESTS AND TUTORIAL
 
 Python tests using pytest and hypothesis.
 Contains pytest scripts which helps in understanding different pytest functionalities and features.
+
+## Introduction
+
+This project is dedicated to testing and validating various scenarios using property based testing (PBT) in Python. It
+showcases different algorithms and their usage, providing a practical insight into property based testing with pytest
+and hypothesis.
+
+## Property-based testing (PBT)
+
+Property-based testing (PBT) is a testing technique where you define the general properties your code should satisfy and
+then run tests against a wide range of inputs to ensure the properties hold. In Python, Hypothesis is a popular library
+for
+PBT. Below are varied code examples demonstrating the use of PBT, ranging from basic to advanced scenarios.
+
+## Pytest
 
 The [pytest](https://docs.pytest.org/en/latest/) framework makes it easy to write small tests, yet
 scales to support complex functional testing for applications and libraries.
@@ -99,10 +114,6 @@ pytest src/tests -n 5
 $ autopep8 --in-place --aggressive --aggressive <filename>
 ```
 
-## References
-
-* Hypothesis for Python: https://hypothesis.readthedocs.io/en/latest/
-
 ## Hypothesis shrinking
 
 Hypothesis shrinking is a process that occurs after a test failure is detected. When Hypothesis finds an example that
@@ -139,6 +150,16 @@ without any need for customization.
 To illustrate, if you have a test that fails for a list of integers [10, 0, -5, 30, 20] that causes a division by zero
 in your function, Hypothesis might shrink this list down to just [0] if the zero alone is enough to trigger the bug,
 clearly pointing out that the issue arises from division by zero, not the other values in the array.
+
+## References
+
+* An introduction to property based
+  testing: https://medium.com/criteo-engineering/introduction-to-property-based-testing-f5236229d237
+* Hypothesis, PBT for Python: https://hypothesis.readthedocs.io/en/latest/
+* A PBT article focused on
+  python: https://www.freecodecamp.org/news/intro-to-property-based-testing-in-python-6321e0c2f8b/
+* Property testing definition: https://en.wikipedia.org/wiki/Property_testing
+* Another python lib for PBT called testing/quick: https://www.mayhem.security/blog/what-is-property-based-testing
 
 ## Author
 
