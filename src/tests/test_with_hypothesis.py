@@ -40,7 +40,7 @@ def test_add_with_shrinking_example(num1, num2):
     # Test Commutative property
     assert add(num1, num2) == add(num2, num1)
 
-
+@settings(verbosity=Verbosity.verbose)
 # Marking this test as expected to fail:
 # @pytest.mark.xfail
 # @settings(verbosity=Verbosity.verbose)
@@ -54,7 +54,7 @@ def test_subtract(num1, num2):
     :param num2: an integer value
     """
     assert subtract(num1, num2) == num1 - num2
-    # assert num1 <= 30  # if we want to fail
+    #assert num1 <= 30  # if we want to fail
 
 
 # Marking this test as expected to fail:
@@ -79,7 +79,8 @@ def test_floats(value):
     """
     assert -1e10 <= value <= 1e10
 
-
+@settings(verbosity=Verbosity.verbose)
+#@settings(max_examples=) # TODO check and test
 @given(st.text(alphabet=st.characters(blacklist_categories=["Cs", "Cc"]), min_size=1, max_size=100))
 def test_strings(value):
     """
