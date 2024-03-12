@@ -44,7 +44,7 @@ def test_increase():
     assert increase(3) == 4
 ```
 
-How to Run the project?
+How to run the project?
 =====
 
 1. Clone and open this repo:
