@@ -160,6 +160,7 @@ clearly pointing out that the issue arises from division by zero, not the other 
   python: https://www.freecodecamp.org/news/intro-to-property-based-testing-in-python-6321e0c2f8b/
 * Property testing definition: https://en.wikipedia.org/wiki/Property_testing
 * Another python lib for PBT called testing/quick: https://www.mayhem.security/blog/what-is-property-based-testing
+* What is PBT, another point of view: https://hypothesis.works/articles/what-is-property-based-testing/
 
 ## Author
 
