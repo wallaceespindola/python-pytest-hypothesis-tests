@@ -15,6 +15,58 @@ from ..calc import *
 
 """
 Test using hypothesis library, wide number of possibilities are tested
+
+The list of possible strategies:
+[
+    "binary",
+    "booleans",
+    "builds",
+    "characters",
+    "complex_numbers",
+    "composite",
+    "data",
+    "DataObject",
+    "dates",
+    "datetimes",
+    "decimals",
+    "deferred",
+    "dictionaries",
+    "DrawFn",
+    "emails",
+    "fixed_dictionaries",
+    "floats",
+    "fractions",
+    "from_regex",
+    "from_type",
+    "frozensets",
+    "functions",
+    "integers",
+    "ip_addresses",
+    "iterables",
+    "just",
+    "lists",
+    "none",
+    "nothing",
+    "one_of",
+    "permutations",
+    "random_module",
+    "randoms",
+    "recursive",
+    "register_type_strategy",
+    "runner",
+    "sampled_from",
+    "sets",
+    "shared",
+    "slices",
+    "text",
+    "timedeltas",
+    "times",
+    "timezone_keys",
+    "timezones",
+    "tuples",
+    "uuids",
+    "SearchStrategy",
+]
 """
 
 
@@ -40,6 +92,7 @@ def test_add_with_shrinking_example(num1, num2):
     # Test Commutative property
     assert add(num1, num2) == add(num2, num1)
 
+
 @settings(verbosity=Verbosity.verbose)
 # Marking this test as expected to fail:
 # @pytest.mark.xfail
@@ -48,13 +101,13 @@ def test_add_with_shrinking_example(num1, num2):
 def test_subtract(num1, num2):
     """
     Shrinking failures is the process by which Hypothesis tries to produce human-readable examples when it
-    finds a failure. It takes a complex example and turns it into a simpler one. To demonstrate this feature, 
+    finds a failure. It takes a complex example and turns it into a simpler one. To demonstrate this feature,
     let’s add one more property to our test_sum function which says num1 should be less than or equal to 30.
     :param num1: an integer value
     :param num2: an integer value
     """
     assert subtract(num1, num2) == num1 - num2
-    #assert num1 <= 30  # if we want to fail
+    # assert num1 <= 30  # if we want to fail
 
 
 # Marking this test as expected to fail:
@@ -79,8 +132,9 @@ def test_floats(value):
     """
     assert -1e10 <= value <= 1e10
 
+
 @settings(verbosity=Verbosity.verbose)
-#@settings(max_examples=) # TODO check and test
+# @settings(max_examples=) # TODO check and test
 @given(st.text(alphabet=st.characters(blacklist_categories=["Cs", "Cc"]), min_size=1, max_size=100))
 def test_strings(value):
     """
