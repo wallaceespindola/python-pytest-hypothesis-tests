@@ -116,7 +116,7 @@ $ autopep8 --in-place --aggressive --aggressive <filename>
 
 ## Hypothesis shrinking
 
-Hypothesis shrinking is a process that occurs after a test failure is detected. When Hypothesis finds an example that
+> Hypothesis shrinking is a process that occurs after a test failure is detected. When Hypothesis finds an example that
 causes your test to fail, it doesn't stop there. Instead, it tries to simplify or "shrink" the example to the smallest
 or simplest form that still causes the test to fail. This feature is incredibly useful because it often uncovers the
 minimal scenario that triggers the bug, making it easier to understand and fix.
