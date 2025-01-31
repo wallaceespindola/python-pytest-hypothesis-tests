@@ -168,6 +168,7 @@ clearly pointing out that the issue arises from division by zero, not the other 
 * E-mail: wallace.espindola@gmail.com
 * LinkedIn: https://www.linkedin.com/in/wallaceespindola/
 * Website: https://wtechitsolutions.com/
+* Gravatar: https://gravatar.com/wallacese
 
 ## License
 
